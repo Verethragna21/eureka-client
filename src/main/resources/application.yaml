@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: greetings-service
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/greetings-service/
+
+eureka:
+  server:
+    enableSelfPreservation: false
+  client:
+    serviceUrl:
+      defaultZone: https://eureka-server-153892321326.us-central1.run.app/eureka
+  instance:
+    preferIpAddress: true
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 35
+
+management:
+  server:
+    port: 0
+    context-path: /
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
