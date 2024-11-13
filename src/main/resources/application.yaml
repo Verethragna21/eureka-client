@@ -17,7 +17,7 @@ eureka:
     serviceUrl:
       defaultZone: https://eureka-server-153892321326.us-central1.run.app/eureka
   instance:
-    preferIpAddress: true
+    preferIpAddress: false
     lease-renewal-interval-in-seconds: 30
     lease-expiration-duration-in-seconds: 35
 
