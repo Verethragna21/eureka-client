@@ -6,7 +6,7 @@ spring:
       matching-strategy: ant_path_matcher
 
 server:
-  port: 8080
+  port: ${PORT:8080}
   servlet:
     context-path: /api/greetings-service/
 
@@ -15,9 +15,9 @@ eureka:
     enableSelfPreservation: false
   client:
     serviceUrl:
-      defaultZone: https://eureka-server-153892321326.us-central1.run.app/eureka
+      defaultZone: http://localhost:8761/eureka
   instance:
-    hostname: eureka-server-153892321326.us-central1.run.app
+    hostname: localhost:8761
     preferIpAddress: false
     lease-renewal-interval-in-seconds: 30
     lease-expiration-duration-in-seconds: 35
