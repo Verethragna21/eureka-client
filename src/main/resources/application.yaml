@@ -20,7 +20,7 @@ eureka:
     hostname: eureka-client-153892321326.us-central1.run.app
     ip-address: eureka-client-153892321326.us-central1.run.app
     nonSecurePort: 443
-    preferIpAddress: false
+    preferIpAddress: true
     lease-renewal-interval-in-seconds: 30
     lease-expiration-duration-in-seconds: 35
 
