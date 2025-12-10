@@ -2,6 +2,14 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.3.5'
 	id 'io.spring.dependency-management' version '1.1.6'
+	id "org.sonarqube" version "7.0.1.6134"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "Verethragna21_eureka-client_d62f4430-d9eb-4dd9-a847-b8f31e4f2be9"
+    property "sonar.projectName", "eureka-client"
+  }
 }
 
 group = 'com.example'
